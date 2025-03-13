@@ -9,7 +9,6 @@ export default function Model() {
     const amRef = useRef(null);
     // @ts-ignore
     useHelper(lightRef, DirectionalLightHelper, 3, "red");
-    useHelper(amRef, SpotLightHelper, 3, "green");
     return(
         <>
             <Environment preset={"night"}></Environment>
