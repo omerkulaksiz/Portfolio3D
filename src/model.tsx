@@ -1,4 +1,4 @@
-import {Environment, useGLTF,} from "@react-three/drei";
+import {Environment, Html, useGLTF,} from "@react-three/drei";
 // import {useRef} from "react";
 // import {DirectionalLightHelper, SpotLightHelper} from "three";
 
@@ -12,7 +12,18 @@ export default function Model() {
     return(
         <>
             <Environment preset={"night"}></Environment>
-            <primitive object={model.scene}  />
+            <primitive object={model.scene}>
+            <Html wrapperClass="model" position={[0.1,5.56,2.35]}
+                  transform
+                  rotation={[0, 1.6, 0]}
+                  // rotation-y={1.6}
+                  // rotation-z={0}
+                  // rotation-x={0}
+
+                distanceFactor={0.5}>
+                <iframe src="https://chefvolkan.netlify.app"></iframe>
+            </Html>
+                </primitive>
         </>
     )
 

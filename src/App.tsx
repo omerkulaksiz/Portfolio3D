@@ -36,14 +36,14 @@ function App() {
             <OrbitControls
                 minPolarAngle={0.7}
                 maxPolarAngle={Math.PI * 0.35}
-                maxAzimuthAngle={Math.PI * 0.7}
+                maxAzimuthAngle={Math.PI * 0.8}
                 minAzimuthAngle={Math.PI * 0.2}
                 maxDistance={17}
-                minDistance={14}
+                minDistance={17}
             />
             {/*<OfficeModel />*/}
             <Model></Model>
-            <fog attach="fog" args={['#080606', 20, 35]} />
+            <fog attach="fog" args={['#080606', 25, 30]} />
         </Canvas>
     );
 }
