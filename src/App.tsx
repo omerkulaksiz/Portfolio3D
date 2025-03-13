@@ -1,61 +1,28 @@
-// import React, { useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { useLoader } from '@react-three/fiber';
-// import { useFrame } from '@react-three/fiber';
-// import * as THREE from 'three';
+import {OrbitControls} from '@react-three/drei';
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+// import { useLoader } from '@react-three/fiber';
 import './App.css';
+import Model from "./model.tsx";
 
 
-// function Torus() {
-//     const mesh = useRef<THREE.Mesh>(null!);
-//
-//     useFrame(() => {
-//         if (mesh.current) {
-//             mesh.current.rotation.x += 0.01;
-//             mesh.current.rotation.y += 0.005;
-//             mesh.current.rotation.z += 0.01;
-//         }
-//     });
-//
+// function OfficeModel() {
+//     const gltf = useLoader(GLTFLoader, '/office.glb');
+//     console.log(gltf.scene);
 //     return (
-//         <mesh ref={mesh} position={[0, 10, 0]}>
-//             <torusGeometry args={[7, 2, 16, 90]} />
-//             <meshStandardMaterial color="#FF6347" wireframe={false} />
-//         </mesh>
+//         <primitive object={gltf.scene}  />)
+// }
+// function Lights() {
+//     return (
+//         <>
+//             <ambientLight/>
+//             <directionalLight position={[7, 15, -3]} intensity={1.4} />
+//             <spotLight position={[0, 13.3, 0]} intensity={2} distance={20} />
+//
+//
+//         </>
 //     );
 // }
-
-// function Plane() {
-//     return (
-//         <mesh position={[-10, -10, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-//             <planeGeometry args={[75, 75, 10, 10]} />
-//             <meshStandardMaterial
-//                 color="white"
-//                 side={THREE.DoubleSide}
-//                 metalness={0.5}
-//                 roughness={0.7}
-//             />
-//         </mesh>
-//     );
-// }
-
-function OfficeModel() {
-    const gltf = useLoader(GLTFLoader, '/office.glb');
-
-    return <primitive object={gltf.scene} />;
-}
-
-function Lights() {
-    return (
-        <>
-            <directionalLight position={[7, 15, -3]} intensity={1.4} />
-            <spotLight position={[0, 13.3, 0]} intensity={30} distance={20} />
-
-        </>
-    );
-}
 
 
 
@@ -74,8 +41,9 @@ function App() {
                 maxDistance={17}
                 minDistance={14}
             />
-            <OfficeModel />
-            <Lights />
+            {/*<OfficeModel />*/}
+            <Model></Model>
+            <fog attach="fog" args={['#080606', 20, 35]} />
         </Canvas>
     );
 }
