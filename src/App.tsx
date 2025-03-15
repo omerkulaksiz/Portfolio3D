@@ -32,18 +32,18 @@ function App() {
             style={{ width: '100vw', height: '100vh' }}
             camera={{ position: [0, 10, 17], fov: 75 }}
         >
-            <color attach="background" args={['#080606']} />
+            <color attach="background" args={['#BBBCBC']} />
             <OrbitControls
-                minPolarAngle={0.7}
-                maxPolarAngle={Math.PI * 0.35}
-                maxAzimuthAngle={Math.PI * 0.8}
-                minAzimuthAngle={Math.PI * 0.2}
-                maxDistance={17}
-                minDistance={17}
+                // minPolarAngle={0.7}
+                // maxPolarAngle={Math.PI * 0.35}
+                // maxAzimuthAngle={Math.PI * 0.8}
+                // minAzimuthAngle={Math.PI * 0.2}
+                // maxDistance={17}
+                // minDistance={17}
             />
             {/*<OfficeModel />*/}
             <Model></Model>
-            <fog attach="fog" args={['#080606', 25, 30]} />
+            {/*<fog attach="fog" args={['#BBBCBC', 20, 30]} />*/}
         </Canvas>
     );
 }

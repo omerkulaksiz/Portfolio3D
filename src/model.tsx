@@ -13,9 +13,9 @@ export default function Model() {
         <>
             <Environment preset={"night"}></Environment>
             <primitive object={model.scene}>
-            <Html wrapperClass="model" position={[0.1,5.56,2.35]}
+            <Html wrapperClass="model" position={[0.03,5.56,2.35]}
                   transform
-                  rotation={[0, 1.6, 0]}
+                  rotation={[0, 1.57, 0]}
                   // rotation-y={1.6}
                   // rotation-z={0}
                   // rotation-x={0}
